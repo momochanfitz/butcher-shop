@@ -7,4 +7,5 @@ describe PrimalCut do
 
   it { should have_many :cuts }
   it { should belong_to :animal }
+
 end

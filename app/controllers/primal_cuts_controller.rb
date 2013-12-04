@@ -10,7 +10,7 @@ class PrimalCutsController < ApplicationController
   end
 
   def create
-    @primal_cut = @animal.primal_cuts.create(primal_cut_params)
+    @primal_cut = @animal.primal_cuts.create primal_cut_params
     respond_with @primal_cut
   end
 

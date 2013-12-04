@@ -9,7 +9,7 @@ class AnimalsController < ApplicationController
   end
 
   def create
-    @animal = Animal.create animal_params
+    @animal = Animal.create(animal_params)
     respond_with @animal
   end
 
@@ -24,12 +24,12 @@ class AnimalsController < ApplicationController
 
   def destroy
     @animal.destroy
-    head 2004
+    head 204
   end
 
   protected
     def find_animal
-      @animal = Animal.find(params[:id])
+      @animal = Animal.find params[:id]
     rescue ActiveRecord::RecordNotFound
       head 404
     end
