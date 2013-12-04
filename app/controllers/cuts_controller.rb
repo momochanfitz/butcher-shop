@@ -36,7 +36,7 @@ class CutsController < ApplicationController
     end
 
     def find_cut
-      @cut = Cut.find params[:id]
+      @cut = Cut.find(params[:id])
     rescue ActiveRecord::RecordNotFound
       head 404
     end

@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    respond_with user
+    respond_with @user
   end
 
   def update
