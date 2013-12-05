@@ -55,7 +55,7 @@ describe UsersController do
         User.find(user.id).first_name.should eq user_attrs[:user][:first_name]
       end
 
-      context "with bad params" do
+      context "with bad parameters" do
         before(:each) { put :update, { :id => user.id, :user => { :first_name => nil }, :format => :json } }
 
         its(:body)    { should_not be_empty }

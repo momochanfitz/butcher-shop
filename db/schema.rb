@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(:version => 20131205200906) do
 
   create_table "cuts", :force => true do |t|
     t.string   "name"
-    t.integer "favorite_id"
+    t.integer  "favorite_id"
     t.integer  "primal_cut_id"
     t.integer  "animal_id"
     t.datetime "created_at",    :null => false
@@ -29,18 +29,16 @@ ActiveRecord::Schema.define(:version => 20131205200906) do
   end
 
   add_index "cuts", ["animal_id"], :name => "index_cuts_on_animal_id"
-  add_index "cuts", ["primal_cut_id"], :name => "index_cuts_on_primal_cut_id"
   add_index "cuts", ["favorite_id"], :name => "index_cuts_on_favorite_id"
+  add_index "cuts", ["primal_cut_id"], :name => "index_cuts_on_primal_cut_id"
 
   create_table "favorites", :force => true do |t|
     t.string   "name"
-    t.integer  "cut_id"
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
-  add_index "favorites", ["cut_id"], :name => "index_favorites_on_cut_id"
   add_index "favorites", ["user_id"], :name => "index_favorites_on_user_id"
 
   create_table "primal_cuts", :force => true do |t|

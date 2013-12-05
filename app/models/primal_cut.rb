@@ -5,5 +5,7 @@ class PrimalCut < ActiveRecord::Base
   has_many   :cuts
   belongs_to :animal
 
+  attr_accessible :name
+
   validates :name, :presence => true
 end
