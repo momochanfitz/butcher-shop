@@ -9,5 +9,6 @@ class CreateCuts < ActiveRecord::Migration
     end
     add_index :cuts, :primal_cut_id
     add_index :cuts, :animal_id
+    add_index :cuts, :favorite_id
   end
 end
