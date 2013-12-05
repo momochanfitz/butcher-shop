@@ -4,7 +4,8 @@ class CreateCuts < ActiveRecord::Migration
       t.string :name
       t.references :primal_cut
       t.references :animal
-
+      t.references :favorite
+      t.integer :favorite_id
       t.timestamps
     end
     add_index :cuts, :primal_cut_id

@@ -3,7 +3,7 @@ class CreateFavorites < ActiveRecord::Migration
     create_table :favorites do |t|
       t.references :user
       t.references :cut
-
+      t.string :name
       t.timestamps
     end
     add_index :favorites, :cut_id

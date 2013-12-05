@@ -4,6 +4,7 @@ class Favorite < ActiveRecord::Base
   belongs_to :user
   has_one :cut
 
+  validates :name, :presence => true
   validates :user_id, :presence => true
   validates :cut_id, :presence => true
 end
