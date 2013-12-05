@@ -9,6 +9,7 @@ What we'd like you to do is the following:
 ### Fix the Tests
 
 This app has a bunch of tests. Some of them are failing, and some of them are broken. You must get all tests to pass
+to run tests: rspec on terminal
 
 ### Add a Model & Resources
 
