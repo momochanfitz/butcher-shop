@@ -8,5 +8,4 @@ describe Animal do
 
   it { should have_many :primal_cuts }
   it { should have_many :cuts }
-  it { should have_many :favorites}
 end
