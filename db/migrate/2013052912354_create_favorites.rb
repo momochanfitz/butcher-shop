@@ -1,11 +1,12 @@
 class CreateFavorites < ActiveRecord::Migration
   def change
     create_table :favorites do |t|
-      t.string :cut_id
-      t.string :user_id
-      t.string :animal_id
+      t.references :user
+      t.references :cut
 
       t.timestamps
     end
+    add_index :favorites, :cut_id
+    add_index :favorites, :user_id
   end
 end

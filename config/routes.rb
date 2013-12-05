@@ -6,7 +6,6 @@ ButcherShop::Application.routes.draw do
 
   resources :favorites, :only => [:show, :update, :destroy]
 
-
   resources :animals, :except => [:new, :edit] do
     resources :primal_cuts, :only => [:index, :create]
     resources :cuts,        :only => [:index, :create]
